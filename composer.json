@@ -1,0 +1,17 @@
+{
+    "name": "vince/f-ats-mhs",
+    "require": {
+        "mongodb/mongodb": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vince\\FAtsMhs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VincentKho10",
+            "email": "vincentkho10@gmail.com"
+        }
+    ]
+}
