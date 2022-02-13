@@ -1,8 +1,7 @@
 {
     "name": "vince/f-ats-mhs",
     "require": {
-        "mongodb/mongodb": "1.2.0",
-        "phpunit/phpunit": "^9.5"
+        "mongodb/mongodb": "1.2.0"
     },
     "autoload": {
         "psr-4": {
