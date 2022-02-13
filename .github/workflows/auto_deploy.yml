@@ -22,7 +22,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: php composer.phar update
+      run: php composer update
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
