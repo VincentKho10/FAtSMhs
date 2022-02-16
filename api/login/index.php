@@ -14,3 +14,4 @@ var_dump("test");
 
 //     var_dump($macaddr);
 // }
+?>

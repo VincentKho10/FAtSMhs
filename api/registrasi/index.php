@@ -17,3 +17,4 @@ if ($nrp != null && $pass != null && $macaddr != null) {
 
     echo $result_mahasiswa_user;
 }
+?>
