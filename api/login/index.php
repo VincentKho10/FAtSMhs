@@ -1,5 +1,5 @@
 <?php
-// require '../../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 $macaddr = filter_input(1, "macaddr");
 
