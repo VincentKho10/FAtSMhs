@@ -11,6 +11,6 @@ if ($macaddr != null) {
     $collection_mahasiswa = $client->fatsdb->mahasiswa;
     $result_mahasiswa = $collection_mahasiswa->findOne(['mac_address' => $macaddr]);
 
-    var_dump($macaddr);
+    var_dump($result_mahasiswa);
 }
 ?>
