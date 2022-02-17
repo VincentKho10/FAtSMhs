@@ -1,8 +1,8 @@
 <?php
 
-$nrp = filter_input(1, "nrp");
-$pass = filter_input(1, "pass");
-$macaddr = filter_input(1, "mac");
+$nrp = filter_input(1,"nrp");
+$pass = filter_input(1,"pass");
+$macaddr = filter_input(1,"mac");
 
 if ($nrp != null && $pass != null && $macaddr != null) {
     $client = new MongoDB\Client(

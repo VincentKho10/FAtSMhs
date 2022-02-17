@@ -1,6 +1,6 @@
 <?php
 
-$macaddr = filter_input(1, "macaddr");
+$macaddr = filter_input(1,"macaddr");
 
 if ($macaddr != null) {
     $client = new MongoDB\Client(
