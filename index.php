@@ -1,5 +1,5 @@
 <?php
-    require 'vendor/autoload.php';
+    include 'vendor/autoload.php';
     $act = filter_input(1,"act");
     if($act == "login"){
         require_once('api\login\index.php');

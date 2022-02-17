@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 
 $macaddr = filter_input(1, "macaddr");
 
@@ -13,4 +12,3 @@ if ($macaddr != null) {
 
     var_dump($result_mahasiswa);
 }
-?>

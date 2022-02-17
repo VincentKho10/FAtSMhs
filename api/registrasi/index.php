@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 
 $nrp = filter_input(1, "nrp");
 $pass = filter_input(1, "pass");
@@ -17,4 +16,3 @@ if ($nrp != null && $pass != null && $macaddr != null) {
 
     echo $result_mahasiswa_user;
 }
-?>
