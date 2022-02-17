@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 $nrp = filter_input(1, "nrp");
 $pass = filter_input(1, "pass");
