@@ -1,7 +1,7 @@
 <?php
 
 $macaddr = filter_input(1,"macaddr");
-
+var_dump($macaddr);
 if ($macaddr != null) {
     $client = new MongoDB\Client(
         'mongodb+srv://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
