@@ -8,7 +8,7 @@ if ($macaddr != null) {
     );
 
     $collection_mahasiswa = $client->fatsdb->mahasiswa;
-    $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr]);
+    $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr])->toArray();
 
     var_dump($result_mahasiswa);
 }
