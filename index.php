@@ -29,6 +29,8 @@ $client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zf
         include_once('api\registrasi\index.php');
     }
 } catch (\Exception $e) {
+    throw $e;
+    var_dump($e);
     echo $e;
 }
     ?>
