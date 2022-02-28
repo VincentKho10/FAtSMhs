@@ -29,7 +29,7 @@ $act = filter_input(1, "act");
             var_dump($macaddr);
             try {
                 $mongo = new MongoDB\Client(
-                    'mongodb://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
+                    'mongodb+srv://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
                 );
                 var_dump($macaddr + "test");
 
