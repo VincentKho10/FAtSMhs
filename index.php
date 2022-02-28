@@ -28,16 +28,14 @@ $act = filter_input(1, "act");
         if ($macaddr != null) {
             var_dump($macaddr);
             try {
-                
-            $client = new MongoDB\Client(
-                $uri='mongodb+srv://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
-            );
-            var_dump($macaddr + "test");
+                $client = new MongoDB\Client(
+                    $uri='mongodb+srv://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
+                );
+                var_dump($macaddr + "test");
 
-            $collection_mahasiswa = $client->fatsdb->mahasiswa_user;
-            $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr]);
-
-            echo $result_mahasiswa;
+                $collection_mahasiswa = $client->fatsdb->mahasiswa_user;
+                $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr]);
+                echo $result_mahasiswa;
             } catch (\Exception $e) {
                 echo $e;
             }
