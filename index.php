@@ -4,6 +4,10 @@ require 'api/login/index.php';
 require 'api/registrasi/index.php';
 
 $act = filter_input(1, "act");
+$client = new MongoDB\Client(
+    'mongodb+srv://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
+);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,22 +27,7 @@ $act = filter_input(1, "act");
 <body>
     <?php
     if ($act == "login") {
-
-        $macaddr = filter_input(1, "macaddr");
-        if ($macaddr != null) {
-            var_dump($macaddr);
-            try {
-                $mongo = new MongoDB\Client(
-                    'mongodb://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
-                );
-
-                $collection_mahasiswa = $mongo->fatsdb->mahasiswa_user;
-                $result_mahasiswa = $collection_mahasiswa->find(['mac_address'=> $macaddr]);
-                echo $result_mahasiswa;
-            } catch (\Exception $e) {
-                echo $e;
-            }
-        }
+        include_once('api\login\index.php');
     } else if ($act == 'register') {
         include_once('api\registrasi\index.php');
     }
