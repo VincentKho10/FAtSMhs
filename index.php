@@ -39,7 +39,7 @@ $act = filter_input(1, "act");
 
             echo $result_mahasiswa;
             } catch (\Exception $e) {
-                echo $e
+                echo $e;
             }
         }
     } else if ($act == 'register') {
