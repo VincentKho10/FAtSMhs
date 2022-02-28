@@ -31,10 +31,9 @@ $act = filter_input(1, "act");
                 $mongo = new MongoDB\Client(
                     'mongodb://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
                 );
-                var_dump($macaddr + "test");
 
                 $collection_mahasiswa = $mongo->fatsdb->mahasiswa_user;
-                $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr]);
+                $result_mahasiswa = $collection_mahasiswa->find(['mac_address'=> $macaddr]);
                 echo $result_mahasiswa;
             } catch (\Exception $e) {
                 echo $e;
