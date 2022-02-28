@@ -27,6 +27,8 @@ $act = filter_input(1, "act");
         $macaddr = filter_input(1, "macaddr");
         if ($macaddr != null) {
             var_dump($macaddr);
+            try {
+                
             $client = new MongoDB\Client(
                 $uri='mongodb+srv://Vincent:Tu70r14l@cluster0.zfifs.mongodb.net/fatsdb?retryWrites=true&w=majority'
             );
@@ -36,6 +38,9 @@ $act = filter_input(1, "act");
             $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr]);
 
             echo $result_mahasiswa;
+            } catch (\Exception $e) {
+                echo $e
+            }
         }
     } else if ($act == 'register') {
         include_once('api\registrasi\index.php');
