@@ -16,15 +16,16 @@ $act = filter_input(1, "act");
                     echo "register";
                 }
             ?>
-    </title>
+        </title>
     </head>
     <body>
-    <?php
-        if ($act == "login") {
-            include_once('api\login\index.php');
-        } else if ($act == 'register') {
-            include_once('api\registrasi\index.php');
-        }
-    ?>
+        <?php
+            if ($act == "login") {
+                include_once('api\login\index.php');
+            } else if ($act == 'register') {
+                include_once('api\registrasi\index.php');
+            }
+        ?>
+        
     </body>
 </html>
