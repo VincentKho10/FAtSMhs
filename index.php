@@ -37,7 +37,7 @@ $act = filter_input(1, "act");
                 $result_mahasiswa = $collection_mahasiswa->find(['mac_address' => $macaddr]);
                 echo $result_mahasiswa;
             } catch (\Exception $e) {
-                throw $e;
+                echo $e;
             }
         }
     } else if ($act == 'register') {
