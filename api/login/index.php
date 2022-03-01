@@ -1,5 +1,5 @@
 <?php
-
+try{
 $macaddr = filter_input(1, "macaddr");
 if ($macaddr != null) {
     var_dump($macaddr);
@@ -7,4 +7,10 @@ if ($macaddr != null) {
     $result_mahasiswa = $collection_mahasiswa->find(['mac_address'=> $macaddr]);
     var_dump($result_mahasiswa);
     echo $result_mahasiswa;
+}
+
+} catch (\Exception $e) {
+    throw $e;
+    var_dump($e);
+    echo $e;
 }
