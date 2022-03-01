@@ -5,7 +5,7 @@ $macaddr = filter_input(1, "macaddr");
         var_dump($macaddr);
         $collection_mahasiswa = $client->fatsdb->mahasiswa_user;
         $result_mahasiswa = $collection_mahasiswa->find(['mac_address'=> $macaddr])->toArray();
-        var_dump($result_mahasiswa[0]);
+        echo MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_mahasiswa[0]));
     }
 } catch (\Exception $e) {
     throw $e;
