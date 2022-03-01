@@ -51,14 +51,13 @@ $client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zf
                 $result_mahasiswa = $collection_mahasiswa->find(['nrp' => $nrp, 'password' => $pass]);
                 $collection_mahasiswa_user = $client->fatsdb->mahasiswa_user;
                 $result_mahasiswa_user = $collection_mahasiswa->insertOne(['mahasiswa' => $result_mahasiswa, "mac_address" => $macaddr]);
-        
-                echo $result_mahasiswa_user;
+                
+                echo "{\"success\":true}";
             }
+            echo "{\"success\":false}";
         
         } catch (\Exception $e) {
-            throw $e;
-            var_dump($e);
-            echo $e;
+            echo "{\"success\":false}";
         }
     }
     ?>
