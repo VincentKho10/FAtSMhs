@@ -34,7 +34,6 @@ $client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zf
                     echo "{}";
                 }
             }
-            echo "{}";
         } catch (\Exception $e) {
             echo "{}";
         }
