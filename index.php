@@ -34,10 +34,9 @@ $client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zf
                     echo "{}";
                 }
             }
+            echo "{}";
         } catch (\Exception $e) {
-            throw $e;
-            var_dump($e);
-            echo $e;
+            echo "{}";
         }
     } else if ($act == "register") {
         try{
