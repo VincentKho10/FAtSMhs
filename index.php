@@ -26,7 +26,6 @@ $client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zf
         try{
             $macaddr = filter_input(1, "macaddr");
             if ($macaddr != null) {
-                var_dump($macaddr);
                 $collection_mahasiswa = $client->fatsdb->mahasiswa_user;
                 $result_mahasiswa = $collection_mahasiswa->find(['mac_address'=> $macaddr])->toArray();
                 if(count($result_mahasiswa)==1){
