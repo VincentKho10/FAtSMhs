@@ -1,7 +1,5 @@
     $input = filter_input(1,"jadwal_id");
     if($input != null){
-        $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.zfifs.mongodb.net:27017,cluster0-shard-00-01.zfifs.mongodb.net:27017,cluster0-shard-00-02.zfifs.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-quesel-shard-0&authSource=admin&retryWrites=true&w=majority');
-
         $collection_kehadiran = $client->fatsdb->kehadiran;
         $result_kehadiran = $collection_kehadiran->find( [ 'jadwal._id' => new MongoDB\BSON\ObjectId("$input") ] )->toArray();
 
