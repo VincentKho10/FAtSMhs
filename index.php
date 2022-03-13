@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 
 $act = filter_input(1, "act");
-$client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zfifs.mongodb.net:27017,cluster0-shard-00-01.zfifs.mongodb.net:27017,cluster0-shard-00-02.zfifs.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-quesel-shard-0&authSource=admin&retryWrites=true&w=majority');
+$client = new MongoDB\Client('mongodb://Vincent:Tu70r14l@cluster0-shard-00-00.zfifs.mongodb.net:27017,cluster0-shard-00-01.zfifs.mongodb.net:27017,cluster0-shard-00-02.zfifs.mongodb.net:27017/fatsdb?ssl=true&replicaSet=atlas-quesel-shard-0&authSource=admin&retryWrites=true&w=majority');
 
 ?>
 <!DOCTYPE html>
