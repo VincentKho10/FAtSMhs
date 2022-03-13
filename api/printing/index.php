@@ -1,5 +1,5 @@
 <?php
-    require 'vendor/autoload.php';
+    require '../vendor/autoload.php';
 
     $input = filter_input(1,"jadwal_id");
     if($input != null){
