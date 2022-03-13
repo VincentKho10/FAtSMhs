@@ -23,7 +23,7 @@ $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.
 <body>
     <?php
     if ($act == "login") {
-        // require_once("api/login/index.php");
+        require_once("api/login/index.php");
     } else if ($act == "register") {
         try{
             $nrp = filter_input(1,"nrp");
