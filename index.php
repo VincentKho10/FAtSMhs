@@ -32,7 +32,6 @@ $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.
         var_dump($act);
         require_once("api/printing/index.php");
     }
-    var_dump($act);
     ?>
 
 </body>
