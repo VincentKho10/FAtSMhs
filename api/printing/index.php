@@ -1,4 +1,4 @@
-<?php
+
     require '../vendor/autoload.php';
 
     $input = filter_input(1,"jadwal_id");
@@ -104,3 +104,4 @@
     </body>
     <!-- <script src="index.js"></script> -->
 </html>
+<?php
