@@ -22,16 +22,15 @@ $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.
 
 <body>
     <?php
-    if ($act == "login") {
+    if ($act == "printing") {
+        require_once("api/printing/index.php");
+    } else if ($act == "login") {
         var_dump($act);
         require_once("api/login/index.php");
     } else if ($act == "register") {
         var_dump($act);
         require_once("api/register/index.php");
-    }else if ($act == "printing") {
-        var_dump($act);
-        require_once("api/printing/index.php");
-    }
+    } 
     ?>
 
 </body>
