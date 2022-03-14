@@ -1,3 +1,4 @@
+<?php
     $input = filter_input(1,"jadwal_id");
     if($input != null){
         $collection_kehadiran = $client->fatsdb->kehadiran;
