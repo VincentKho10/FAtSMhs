@@ -10,7 +10,7 @@
         $jadwal = $result_jadwal[0];
 
         // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_jadwal)));
-?>
+?>?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -100,3 +100,4 @@
     </body>
     <!-- <script src="index.js"></script> -->
 </html>
+<?php
