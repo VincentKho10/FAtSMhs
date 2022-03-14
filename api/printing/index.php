@@ -1,4 +1,4 @@
-<?php
+
     $input = filter_input(1,"jadwal_id");
     if($input != null){
         $collection_kehadiran = $client->fatsdb->kehadiran;
@@ -10,7 +10,7 @@
         $jadwal = $result_jadwal[0];
 
         // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_jadwal)));
-?>?>
+?>
 <!DOCTYPE html>
 <html>
     <head>
