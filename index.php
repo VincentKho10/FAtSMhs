@@ -9,6 +9,7 @@ $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.
 <html>
 
 <head>
+    <link href="index.css" rel="stylesheet">
     <title>
         <?php
         if ($act == "login") {
