@@ -1,4 +1,4 @@
-
+<?php
     $input = filter_input(1,"jadwal_id");
     if($input != null){
         $collection_kehadiran = $client->fatsdb->kehadiran;
@@ -10,38 +10,31 @@
         $jadwal = $result_jadwal[0];
 
         // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_jadwal)));
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Print Form</title>
-        <link href="index.css" rel="stylesheet">
-    </head>
-    <body>
-        <h2 class="layout">DAFTAR HADIR MAHASISWA UNIVERSITAS KRISTEN MARANATHA</h1>
-        <div class="details layout">
-            <div class="rodesc">
-                <div class="desc left"><?php echo "<div class='nama'>Program Studi</div><div class='titikdua'>:</div><div class='info'>".$jadwal['program_studi']."</div>" ?></div>
-                <div class="desc right"><?php echo "<div class='nama'>Mata Kuliah</div><div class='titikdua'>:</div><div class='info'>".$jadwal['mata_kuliah']."</div>" ?></div>
-            </div>
-            <div class="rodesc">
-                <div class="desc left"><?php echo "<div class='nama'>Kelas</div><div class='titikdua'>:</div><div class='info'>".$jadwal['kelas']."</div>" ?></div>
-                <div class="desc right"><?php echo "<div class='nama'>Semester</div><div class='titikdua'>:</div><div class='info'>".$jadwal['semester']."</div>" ?></div>
-            </div>
-            <div class="rodesc">
-                <div class="desc left"><?php echo "<div class='nama'>Kode MK</div><div class='titikdua'>:</div><div class='info'>".$jadwal['kode_mk']."</div>" ?></div>
-                <div class="desc right"><?php echo "<div class='nama'>Ruangan</div><div class='titikdua'>:</div><div class='info'>".$jadwal['ruang']."</div>" ?></div>
-            </div>
-            <div class="rodesc">
-                <div class="desc left"><?php echo "<div class='nama'>Waktu</div><div class='titikdua'>:</div><div class='info'>".$jadwal['waktu']."</div>" ?></div>
-                <div class="desc right"><?php echo "<div class='nama'>Dosen</div><div class='titikdua'>:</div><div class='info'>".$jadwal['dosen']['nama']."</div>" ?></div>
-            </div>
-        </div>
-        <table>
-            <tr>
-                <th>No.</th>
-                <th>Nama Lengkap</th>
-                <?php
+
+        echo '<h2 class="layout">DAFTAR HADIR MAHASISWA UNIVERSITAS KRISTEN MARANATHA</h1>';
+        echo '<div class="details layout">';
+        echo '<div class="rodesc">';
+        echo '<div class="desc left"><?php echo "<div class=\'nama\'>Program Studi</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'program_studi\']."</div>" ?></div>';
+        echo '<div class="desc right"><?php echo "<div class=\'nama\'>Mata Kuliah</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'mata_kuliah\']."</div>" ?></div>';
+        echo '</div>';
+        echo '<div class="rodesc">';
+        echo '<div class="desc left"><?php echo "<div class=\'nama\'>Kelas</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'kelas\']."</div>" ?></div>';
+        echo '<div class="desc right"><?php echo "<div class=\'nama\'>Semester</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'semester\']."</div>" ?></div>';
+        echo '</div>';
+        echo '<div class="rodesc">';
+        echo '<div class="desc left"><?php echo "<div class=\'nama\'>Kode MK</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'kode_mk\']."</div>" ?></div>';
+        echo '<div class="desc right"><?php echo "<div class=\'nama\'>Ruangan</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'ruang\']."</div>" ?></div>';
+        echo '</div>';
+        echo '<div class="rodesc">';
+        echo '<div class="desc left"><?php echo "<div class=\'nama\'>Waktu</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'waktu\']."</div>" ?></div>';
+        echo '<div class="desc right"><?php echo "<div class=\'nama\'>Dosen</div><div class=\'titikdua\'>:</div><div class=\'info\'>".$jadwal[\'dosen\'][\'nama\']."</div>" ?></div>';
+        echo '</div>';
+        echo '</div>';
+        echo '<table>';
+        echo '<tr>';
+        echo '<th>No.</th>';
+        echo '<th>Nama Lengkap</th>';
+
                     for ($i=0; $i < count($result_kehadiran); $i++) { 
                         echo "<th style='width:85px;'>".$result_kehadiran[$i]["date"]."</th>";
                     }
@@ -50,10 +43,8 @@
                         // echo "<th>".$result_kehadiran[0]["date"]."</th>";
                         echo "<th style='width:85px;'>$i</th>";
                     }
-                ?>
-            </tr>
-            <tr>
-                <?php
+                    echo '</tr>';
+                    echo '<tr>';
                             // $mahasiswas = $result_kehadiran[$i]["jadwal"]["mahasiswas"];
                         // for ($i=0; $i < count($result_kehadiran); $i++) { 
                         //     array_push($mahasiswas,);
@@ -93,11 +84,7 @@
                             }
                             echo "</tr>";
                         }
-                    }
-                ?>
-            </tr>
-        </table>
-    </body>
-    <!-- <script src="index.js"></script> -->
-</html>
-<?php
+                        echo '</tr>';
+echo '</table>';
+}
+            
