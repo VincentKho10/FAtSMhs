@@ -10,7 +10,7 @@ try{
         $collection_mahasiswa_user = $client->fatsdb->mahasiswa_user;
         // $result_mahasiswa_user = $collection_mahasiswa->insertOne(['mahasiswa' => $result_mahasiswa, "mac_address" => $macaddr]);
         
-        echo "{\"email\":$result_mahasiswa,\"success\":true}";
+        echo MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_mahasiswa));
     }
     echo "{\"success\":false}";
 
