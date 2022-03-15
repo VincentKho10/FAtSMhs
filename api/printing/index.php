@@ -11,6 +11,7 @@
 
         // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_jadwal)));
 
+        echo '<link href="api/printing/index.css" rel="stylesheet">';
         echo '<h2 class="layout">DAFTAR HADIR MAHASISWA UNIVERSITAS KRISTEN MARANATHA</h1>';
         echo '<div class="details layout">';
         echo '<div class="rodesc">';
