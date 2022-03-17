@@ -11,6 +11,7 @@
 
         // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_jadwal)));
 
+        echo '<body>';
         echo '<link href="api/printing/index.css" rel="stylesheet">';
         echo '<h2 class="layout">DAFTAR HADIR MAHASISWA UNIVERSITAS KRISTEN MARANATHA</h1>';
         echo '<div class="details layout">';
@@ -44,56 +45,57 @@
         echo '<th>No.</th>';
         echo '<th>Nama Lengkap</th>';
 
-                    for ($i=0; $i < count($result_kehadiran); $i++) { 
-                        echo "<th style='width:85px;'>".$result_kehadiran[$i]["date"]."</th>";
-                    }
-                    
-                    for ($i=count($result_kehadiran)+1; $i <= 12; $i++) { 
-                        // echo "<th>".$result_kehadiran[0]["date"]."</th>";
-                        echo "<th style='width:85px;'>$i</th>";
-                    }
-                    echo '</tr>';
-                    echo '<tr>';
-                            // $mahasiswas = $result_kehadiran[$i]["jadwal"]["mahasiswas"];
-                        // for ($i=0; $i < count($result_kehadiran); $i++) { 
-                        //     array_push($mahasiswas,);
-                        //     var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($mahasiswas)));
-                        // }
-                        // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($mahasiswas)));
-                            // for ($i=1; $i <= 12; $i++) {
-                        $index=0; 
-                        foreach($result_jadwal[0]["mahasiswas"] as $peserta_jadwal){
-                            $index++;
-                            echo "<tr>";
-                            echo "<td>$index</td>";
-                            echo "<td style='width:211px;'>".$peserta_jadwal["nama"]."</td>";
-                            for ($i=0; $i < count($result_kehadiran); $i++) { 
-                                $mahasiswas = $result_kehadiran[$i]["jadwal"]["mahasiswas"];
-                                echo "<td>";
-                                $sho="H";
-                                if($mahasiswas[$index-1]["logged"]==false){
-                                    $sho="A";
-                                }
-                                echo $sho;
-                                echo "</td>";
-                            }
-                            for ($j=count($result_kehadiran)+1; $j <= 12; $j++) { 
-                                echo "<td>";
-                                echo "</td>";
-                            }
-                            echo "</tr>";
-                        }
-                        for ($j=count($result_jadwal[0]["mahasiswas"]); $j < 25; $j++) { 
-                            $index++;
-                            echo "<tr>";
-                            echo "<td>$index</td>";
-                            for ($k=0; $k <= 12; $k++) { 
-                                echo "<td>";
-                                echo "</td>";
-                            }
-                            echo "</tr>";
-                        }
-                        echo '</tr>';
-echo '</table>';
-}
+        for ($i=0; $i < count($result_kehadiran); $i++) { 
+            echo "<th style='width:85px;'>".$result_kehadiran[$i]["date"]."</th>";
+        }
+        
+        for ($i=count($result_kehadiran)+1; $i <= 12; $i++) { 
+            // echo "<th>".$result_kehadiran[0]["date"]."</th>";
+            echo "<th style='width:85px;'>$i</th>";
+        }
+        echo '</tr>';
+        echo '<tr>';
+            // $mahasiswas = $result_kehadiran[$i]["jadwal"]["mahasiswas"];
+        // for ($i=0; $i < count($result_kehadiran); $i++) { 
+        //     array_push($mahasiswas,);
+        //     var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($mahasiswas)));
+        // }
+        // var_dump(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($mahasiswas)));
+            // for ($i=1; $i <= 12; $i++) {
+        $index=0; 
+        foreach($result_jadwal[0]["mahasiswas"] as $peserta_jadwal){
+            $index++;
+            echo "<tr>";
+            echo "<td>$index</td>";
+            echo "<td style='width:211px;'>".$peserta_jadwal["nama"]."</td>";
+            for ($i=0; $i < count($result_kehadiran); $i++) { 
+                $mahasiswas = $result_kehadiran[$i]["jadwal"]["mahasiswas"];
+                echo "<td>";
+                $sho="H";
+                if($mahasiswas[$index-1]["logged"]==false){
+                    $sho="A";
+                }
+                echo $sho;
+                echo "</td>";
+            }
+            for ($j=count($result_kehadiran)+1; $j <= 12; $j++) { 
+                echo "<td>";
+                echo "</td>";
+            }
+            echo "</tr>";
+        }
+        for ($j=count($result_jadwal[0]["mahasiswas"]); $j < 25; $j++) { 
+            $index++;
+            echo "<tr>";
+            echo "<td>$index</td>";
+            for ($k=0; $k <= 12; $k++) { 
+                echo "<td>";
+                echo "</td>";
+            }
+            echo "</tr>";
+        }
+        echo '</tr>';
+        echo '</table>';
+        echo '</body>';
+    }
             
