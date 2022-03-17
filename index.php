@@ -39,7 +39,6 @@ $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.
             require_once("api/login/index.php");
         } else if ($act == "register") {
             require_once("api/register/index.php");
-        } else if ($act == "admin") {
         } else {
             require_once("src/index.php");
         }
