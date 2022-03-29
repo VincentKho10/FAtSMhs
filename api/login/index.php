@@ -1,5 +1,4 @@
 <?php
-echo '<body>';
 try{
     $macaddr = filter_input(1, "macaddr");
     if ($macaddr != null) {
@@ -14,5 +13,4 @@ try{
 } catch (\Exception $e) {
     echo "{}";
 }
-echo '</body>';
 ?>
