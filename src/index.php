@@ -208,13 +208,13 @@
 
       <div class="tab-pane fade" id="list-mahasiswa" role="tabpanel" aria-labelledby="list-mahasiswa-list">
       
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModalMahasiswa">Add</button>
         <!-- Modal -->
-        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal fade" id="addModalMahasiswa" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Mahasiswa</h5>
+                <h5 class="modal-title" id="exampleModalLabelMahasiswa">Add Mahasiswa</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
