@@ -7,10 +7,10 @@ try{
         if(count($result_mahasiswa)==1){
             echo MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_mahasiswa[0]));
         }else{
-            echo "{}";
+            echo "{\"success\":false}";
         }
     }
 } catch (\Exception $e) {
-    echo "{}";
+    echo "{\"success\":false}";
 }
 ?>
