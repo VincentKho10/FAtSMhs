@@ -11,12 +11,14 @@ try{
             $collection_mahasiswa_user = $client->fatsdb->mahasiswa_user;
             $result_mahasiswa_user = $collection_mahasiswa->insertOne(['mahasiswa' => $result_mahasiswa, "mac_address" => $macaddr]);
             echo "{\"success\":success}";
+        }else{
+            echo "{\"success\":false,\"message\":\"mahasiswa result is null\"}";
         }
     }else{
-        echo "{\"success\":false}";
+        echo "{\"success\":false,\"message\":\"there are nrp or pass are empty\"}";
     }
 
 } catch (\Exception $e) {
-    echo "{\"success\":false}";
+    echo "{\"success\":false,\"message\":\"".$e."\"}";
 }
 ?>

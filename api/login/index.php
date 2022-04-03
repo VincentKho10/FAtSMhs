@@ -11,6 +11,6 @@ try{
         }
     }
 } catch (\Exception $e) {
-    echo "{\"success\":false}";
+    echo "{\"success\":false,\"message\":".$e."}";
 }
 ?>
