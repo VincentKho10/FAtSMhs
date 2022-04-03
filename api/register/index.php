@@ -6,11 +6,10 @@ try{
 
     if ($nrp != null && $pass != null && $macaddr != null) {
         $collection_mahasiswa = $client->fatsdb->mahasiswa;
-        $result_mahasiswa = $collection_mahasiswa->find(['nrp' => $nrp, 'password' => $pass])[0];
+        $result_mahasiswa = $collection_mahasiswa->find(['nrp' => $nrp, 'password' => $pass]);
 		if($result_mahasiswa != null){
             $collection_mahasiswa_user = $client->fatsdb->mahasiswa_user;
-            // $result_mahasiswa_user = $collection_mahasiswa->insertOne(['mahasiswa' => $result_mahasiswa, "mac_address" => $macaddr]);
-            echo MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($result_mahasiswa));
+            $result_mahasiswa_user = $collection_mahasiswa->insertOne(['mahasiswa' => $result_mahasiswa, "mac_address" => $macaddr]);
         }
     }else{
         echo "{}";
