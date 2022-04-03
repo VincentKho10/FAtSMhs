@@ -42,11 +42,11 @@
 
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModalUser">Add</button>
         <!-- Modal -->
-        <div class="modal fade" id="addModalUser" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal fade" id="addModalUser" tabindex="-1" aria-labelledby="addModalLabelUser" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+                <h5 class="modal-title" id="exampleModalLabelUser">Add User</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -246,7 +246,7 @@
         </div>
 
 
-        <button type="button" id="btnDelete" class="btn btn-danger" disabled>Delete</button>
+        <button type="button" id="btnDeleteUser" class="btn btn-danger" disabled>Delete</button>
         <!-- Modal -->
         <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
           <div class="modal-dialog">

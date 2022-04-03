@@ -39,13 +39,13 @@ $client = new MongoDB\Client('mongodb://Vincent:google.com@cluster0-shard-00-00.
         if ($act == "printing") {
             require_once("api/printing/index.php");
         } else if ($act == "login") {
-            header('Content-type: application/json');
+            // header('Content-type: application/json');
             require_once("api/login/index.php");
         } else if ($act == "register") {
-            header('Content-type: application/json');
+            // header('Content-type: application/json');
             require_once("api/register/index.php");
-        } else {
-            require_once("src/index.php");
+        // } else {
+        //     require_once("src/index.php");
         }
         ?>
     </body>
